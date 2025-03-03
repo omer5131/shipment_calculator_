@@ -1,5 +1,15 @@
 import streamlit as st
 
+import streamlit as st
+
+st.set_page_config(
+    page_title="Shipment Price Calculator", 
+    page_icon="https://www.ilcargo.com/wp-content/uploads/2024/03/logo.svg"
+)
+
+
+
+
 st.title("Shipment Freight Price Calculator")
 
 # Input fields for the four inputs
