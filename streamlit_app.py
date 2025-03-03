@@ -1,16 +1,25 @@
 import streamlit as st
 
-import streamlit as st
-
+# Set the page configuration (optional)
 st.set_page_config(
     page_title="Shipment Price Calculator", 
-    page_icon="https://www.ilcargo.com/wp-content/uploads/2024/03/logo.svg"
+    page_icon="https://www.ilcargo.com/wp-content/uploads/2024/03/logo.svg",
+    layout="wide"
 )
 
+# Define your logo URL
+logo_url = "https://www.ilcargo.com/wp-content/uploads/2024/03/logo.svg"
+
+# Create columns: left column for logo, right column for title
+col1, col2 = st.columns([1, 5])  # adjust ratio as you like
+
+with col1:
+    st.image(logo_url, width=80)  # adjust width as needed
+
+with col2:
+    st.title("Shipment Freight Price Calculator")
 
 
-
-st.title("Shipment Freight Price Calculator")
 
 # Input fields for the four inputs
 total_items_cost = st.number_input("Total Items Cost in USD", value=0.0, step=0.1, format="%.2f")
